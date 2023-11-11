@@ -1,6 +1,3 @@
-from App.models import Category,Products
-
-
 def get_categorites():
 
     return[{
