@@ -59,8 +59,8 @@ if __name__=='__main__':
                username='admin',
                password=str(hashlib.md5('abc123'.encode('utf-8')).hexdigest()),
                user_role=UseRoleEnum.ADMIN)
-        db.session.add(u)
-        db.session.commit()
+        # db.session.add(u)
+        # db.session.commit()
         # db.create_all()
         # c1 = Category(name='Mobile')
         # c2 = Category(name='Tablet')
@@ -68,17 +68,17 @@ if __name__=='__main__':
         # db.session.add(c2)
         # db.session.commit()
 
-        # p1 = Products(name='Iphone 15 Pro max', price=20000,id_category='1',
-        #               image='https://cdn2.cellphones.com.vn/insecure/rs:fill:358:358/q:80/plain/https://cellphones.com.vn/media/catalog/product/i/p/iphone-15-pro-max_3.png')
-        # p2 = Products(name='Iphone 13 Pro Max', price=30000, id_category='1',
-        #               image='https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:80/plain/https://cellphones.com.vn/media/catalog/product/3/_/3_51_1_2_2_1_1_2.jpg')
-        # p3 = Products(name='Galaxy S23 Ultra', price=25000, id_category='2',
-        #               image='https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:80/plain/https://cellphones.com.vn/media/catalog/product/s/2/s23-ultra-xanh-1.png')
-        # p4 = Products(name='iPad Pro 2018', price=100000, id_category='1',
-        #               image='https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:80/plain/https://cellphones.com.vn/media/catalog/product/i/p/ipad-pro-13-select-202210.png')
-        # p5 = Products(name='Xiaomi Black Shark 4s', price=255000, id_category='1',
-        #               image='https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:80/plain/https://cellphones.com.vn/media/catalog/product/x/i/xiaomi-black-shark-5.png')
-        #
-        # db.session.add_all([p1,p2,p3,p4,p5])
+        p1 = Products(name='Iphone 15 Pro max', price=20000,id_category='1',
+                      image='https://cdn2.cellphones.com.vn/insecure/rs:fill:358:358/q:80/plain/https://cellphones.com.vn/media/catalog/product/i/p/iphone-15-pro-max_3.png')
+        p2 = Products(name='Iphone 13 Pro Max', price=30000, id_category='1',
+                      image='https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:80/plain/https://cellphones.com.vn/media/catalog/product/3/_/3_51_1_2_2_1_1_2.jpg')
+        p3 = Products(name='Galaxy S23 Ultra', price=25000, id_category='2',
+                      image='https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:80/plain/https://cellphones.com.vn/media/catalog/product/s/2/s23-ultra-xanh-1.png')
+        p4 = Products(name='iPad Pro 2018', price=100000, id_category='1',
+                      image='https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:80/plain/https://cellphones.com.vn/media/catalog/product/i/p/ipad-pro-13-select-202210.png')
+        p5 = Products(name='Xiaomi Black Shark 4s', price=255000, id_category='1',
+                      image='https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:80/plain/https://cellphones.com.vn/media/catalog/product/x/i/xiaomi-black-shark-5.png')
 
+        db.session.add_all([p1,p2,p3,p4,p5])
+        db.session.commit()
 
